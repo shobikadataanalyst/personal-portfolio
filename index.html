@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- AOS (Animate On Scroll) -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <!-- Typed.js (Typing Effect) -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Poppins', sans-serif; }
+    .glass {
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+    .glow:hover {
+      box-shadow: 0 0 15px rgba(236, 72, 153, 0.7), 0 0 25px rgba(147, 51, 234, 0.7);
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-pink-900 via-purple-900 to-black text-white">
+
+  <!-- Navbar -->
+  <nav class="fixed w-full glass shadow-lg z-50">
+    <div class="max-w-6xl mx-auto px-4 flex justify-between items-center py-4">
+      <h1 class="text-2xl font-extrabold bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent">
+        Shobika D
+      </h1>
+      <ul class="hidden md:flex space-x-6 text-gray-200 font-semibold">
+        <li><a href="#home" class="hover:text-pink-400 transition">Home</a></li>
+        <li><a href="#about" class="hover:text-pink-400 transition">About</a></li>
+        <li><a href="#skills" class="hover:text-pink-400 transition">Skills</a></li>
+        <li><a href="#projects" class="hover:text-pink-400 transition">Projects</a></li>
+        <li><a href="#contact" class="hover:text-pink-400 transition">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="h-screen flex flex-col justify-center items-center text-center bg-gradient-to-b from-purple-900/90 to-black">
+    <h2 class="text-5xl md:text-7xl font-extrabold mb-4">
+      Hi, I'm <span class="bg-gradient-to-r from-pink-400 to-fuchsia-400 bg-clip-text text-transparent">Shobika</span>
+    </h2>
+    <p class="text-xl md:text-2xl max-w-2xl mb-4 text-pink-200">I am a <span id="typed" class="text-fuchsia-400"></span></p>
+    <a href="#projects" class="mt-6 px-8 py-4 bg-gradient-to-r from-pink-500 to-purple-500 text-white font-bold rounded-full glow transition">
+      View My Work
+    </a>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-20 bg-gradient-to-r from-purple-900 to-black" data-aos="fade-up">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-4xl font-bold bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent mb-6">About Me</h2>
+      <p class="text-lg text-pink-100 leading-relaxed">
+        I'm <b>Shobika D</b>, a <b>Computer Science and Engineering student</b> passionate about <b>Data Science, Cloud Computing, and Software Development</b>.  
+        I’ve interned at <b>KONE Elevators</b> & <b>Seyasoft Technologies</b>, built projects using <b>AWS</b>, and co-founded <b>Artified Duo</b>.  
+        With achievements like <b>Research Head of ACM</b> and consistently securing <b>1st rank</b>, I’m driven to inspire and lead as a woman in tech. 💻✨
+      </p>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="py-20 bg-gradient-to-br from-pink-900 via-purple-900 to-black">
+    <div class="max-w-6xl mx-auto text-center" data-aos="fade-right">
+      <h2 class="text-4xl font-bold bg-gradient-to-r from-pink-400 to-fuchsia-400 bg-clip-text text-transparent mb-6">Skills</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div class="p-6 glass rounded-xl glow transition">Java</div>
+        <div class="p-6 glass rounded-xl glow transition">Python</div>
+        <div class="p-6 glass rounded-xl glow transition">SQL</div>
+        <div class="p-6 glass rounded-xl glow transition">Data Structures</div>
+        <div class="p-6 glass rounded-xl glow transition">AWS Cloud</div>
+        <div class="p-6 glass rounded-xl glow transition">Networks</div>
+        <div class="p-6 glass rounded-xl glow transition">Operating Systems</div>
+        <div class="p-6 glass rounded-xl glow transition">MongoDB</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="py-20 bg-gradient-to-r from-purple-900 to-black" data-aos="zoom-in">
+    <div class="max-w-6xl mx-auto text-center">
+      <h2 class="text-4xl font-bold bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent mb-6">Projects</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+        <div class="p-6 glass rounded-xl glow transition">
+          <h3 class="text-xl font-bold mb-2">💰 Expense Tracker</h3>
+          <p class="text-pink-100 text-sm mb-3">
+            Serverless Personal Expense Tracker using AWS Lambda, API Gateway, and DynamoDB.  
+            Deployed with Vercel frontend.
+          </p>
+          <a href="https://aws-project-1-expense-tracker.vercel.app" target="_blank" class="text-pink-300 font-semibold hover:underline">View Project →</a>
+        </div>
+
+        <div class="p-6 glass rounded-xl glow transition">
+          <h3 class="text-xl font-bold mb-2">💧 Jal Rakshak</h3>
+          <p class="text-pink-100 text-sm mb-3">
+            Water footprint calculator with Flask backend. Helps users track & reduce water usage.
+          </p>
+          <a href="https://aqua-guard-harmony.vercel.app/" target="_blank" class="text-pink-300 font-semibold hover:underline">View Project →</a>
+        </div>
+
+        <div class="p-6 glass rounded-xl glow transition">
+          <h3 class="text-xl font-bold mb-2">🎨 Artified Duo</h3>
+          <p class="text-pink-100 text-sm mb-3">
+            Entrepreneurial venture for crafts & web design. Website deployed with HTML/CSS.
+          </p>
+          <a href="https://art-duo-port.vercel.app/" target="_blank" class="text-pink-300 font-semibold hover:underline">View Project →</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-20 bg-gradient-to-br from-black via-purple-900 to-pink-900" data-aos="fade-up">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-4xl font-bold bg-gradient-to-r from-fuchsia-400 to-pink-400 bg-clip-text text-transparent mb-6">Contact Me</h2>
+      <p class="mb-6 text-pink-100">Let’s collaborate and empower women in tech 💖✨</p>
+      <div class="flex justify-center space-x-6 mt-6">
+        <a href="https://github.com/shobikadataanalyst" target="_blank" class="px-4 py-2 glass rounded-full glow transition">GitHub</a>
+        <a href="https://linkedin.com/in/shobika-dayanidhi" target="_blank" class="px-4 py-2 glass rounded-full glow transition">LinkedIn</a>
+        <a href="https://leetcode.com/u/shobikadayanidhi/" target="_blank" class="px-4 py-2 glass rounded-full glow transition">LeetCode</a>
+        <a href="mailto:shobikaadayanidhi@gmail.com" target="_blank" class="px-4 py-2 glass rounded-full glow transition">Email</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-6 bg-black text-center text-pink-300 text-sm">
+    © 2025 <span class="text-fuchsia-400 font-bold">Shobika D</span>. Women in Tech 💖⚡
+  </footer>
+
+  <!-- JS for animations -->
+  <script>
+    AOS.init({ duration: 1000, once: true });
+
+    var typed = new Typed("#typed", {
+      strings: ["Empowered Techie", "Aspiring Data Scientist", "Cloud Enthusiast", "Proud Woman in Tech 💖"],
+      typeSpeed: 70,
+      backSpeed: 50,
+      loop: true
+    });
+  </script>
+</body>
+</html>
